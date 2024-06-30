@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./Page/Home";
-import { ArtworkPage } from "./Page/Artwork";
+import { Home } from "./page/Home";
+import { ArtworkPage } from "./page/Artwork";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <header></header>
       <main>
         <Router>
@@ -15,7 +17,7 @@ function App() {
           </Routes>
         </Router>
       </main>
-    </>
+    </Provider>
   );
 }
 
