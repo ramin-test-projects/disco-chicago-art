@@ -1,11 +1,17 @@
 export type IArtworkSummary = {
   id: number;
-  title: string;
-  score: number;
-  thumbnail: {
-    alt_text: string;
-    lqip: string;
+  title?: string;
+  score?: number;
+  thumbnail?: {
+    alt_text?: string;
+    lqip?: string;
   };
+};
+
+export type IArtworksSearchParams = {
+  query?: string;
+  page?: number;
+  limit?: number;
 };
 
 export type IArtworksResponse = {
@@ -26,8 +32,8 @@ export type IArtwork = {
   short_description?: string;
   title?: string;
   updated_at?: string;
-  thumbnail: {
-    alt_text: string;
-    lqip: string;
+  thumbnail?: {
+    alt_text?: string;
+    lqip?: string;
   };
 };

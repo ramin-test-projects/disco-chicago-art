@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { testReducer } from "./slice/testreducer"; // Import your reducer(s)
+import { artworksReducer } from "./artworksReducer"; // Import your reducer(s)
 
 export const store = configureStore({
   reducer: {
-    counter: testReducer, // Add your reducer(s) here
+    artworks: artworksReducer, // Add your reducer(s) here
   },
 });

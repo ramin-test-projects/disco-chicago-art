@@ -1,4 +1,8 @@
-import { IArtwork, IArtworksResponse } from "./collections-apis.types";
+import {
+  IArtwork,
+  IArtworksResponse,
+  IArtworksSearchParams,
+} from "./collections-apis.types";
 
 const baseUrl = "https://api.artic.edu/api/v1";
 
@@ -9,11 +13,7 @@ export const searchArtWorks = ({
   query,
   page,
   limit,
-}: {
-  query?: string;
-  page?: number;
-  limit?: number;
-}): Promise<IArtworksResponse> =>
+}: IArtworksSearchParams): Promise<IArtworksResponse> =>
   fetch(
     getUrl(
       `${baseUrl}/artworks/search?q=${query ?? ""}&limit=${limit ?? ""}&page=${

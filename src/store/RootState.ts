@@ -1,5 +1,5 @@
-import { CounterState } from "./slice/testreducer";
+import { ArtworksState } from "./artworksReducer";
 
 export type RootState = {
-  counter: CounterState;
+  artworks: ArtworksState;
 };
